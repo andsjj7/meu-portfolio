@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -97,11 +104,12 @@ nav {
 h1 {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 80px;
 }
 
 h2 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
     background: linear-gradient(to right, #1e0d35, #9661dc );
     background-clip: text;
@@ -129,6 +137,81 @@ p{
     font-size: 17px;
 }
 
-.area-1, .area-2, .area-3 {
+.area-1, .area-2, .area-3, .area-4{
     visibility: hidden;
 }
+
+.container {
+    width: 1200px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    position: relative;
+    padding: 10px;
+    width: 235px;
+    background-color: #ffff;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 45px;
+    overflow: hidden;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.container .card  img{
+    transition: 0.5;
+}
+
+.container .card h6 {
+    font-size: 2rem;
+}
+
+.container .card .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.container .card .content p{
+    color:#1e0d35;
+    transition: 0.8;
+}
+
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color:  white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.7s;
+    outline: none;
+    margin-top: 20px;
+}
+
+.container .card:hover {
+    background-color: #b29bd5;
+    color: #ffff;
+    margin-top: -30px;
+    box-shadow: 1px 2px 10px #9661dc;
+    border-color: #1e0d35;
+}
+
+.container .card:hover img {
+    filter:invert(1)
+}
+.container .card:hover .content p {
+    color: #ffff;
+}
+
+.container .card:hover .content a {
+    color: #000000;
+    background-color: #ffff;
+}
+
+
